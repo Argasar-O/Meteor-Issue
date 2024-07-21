@@ -1,0 +1,103 @@
+{
+  "name": "meteor-issue",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.tsx",
+      "server": "server/main.ts"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "7.18.10",
+    "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
+    "@mui/icons-material": "5.16.4",
+    "@mui/material": "5.16.4",
+    "meteor-node-stubs": "1.2.9",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.35.0",
+    "react-router-dom": "6.3.0",
+    "react-window": "1.8.10"
+  },
+  "devDependencies": {
+    "@types/meteor": "2.9.8",
+    "@types/meteor-roles": "1.2.39",
+    "@types/node": "16.11.7",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "@typescript-eslint/eslint-plugin": "5.30.5",
+    "@typescript-eslint/parser": "5.30.5",
+    "eslint": "8.19.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.30.1",
+    "prettier": "2.7.1",
+    "ts-node": "10.9.2",
+    "typescript": "4.8.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^mongodb$": "<rootDir>/tests/mocks/mongodb.ts",
+      "^meteor/(.*)": "<rootDir>/tests/mocks/meteor/$1.ts"
+    },
+    "roots": [
+      "<rootDir>/tests/"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "endOfLine": "auto"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "imports/ui/common/MuiPhoneNumber/index.js"
+    ],
+    "rules": {
+      "@typescript-eslint/array-type": [
+        "warn",
+        {
+          "default": "array"
+        }
+      ],
+      "curly": [
+        "warn",
+        "multi-or-nest"
+      ],
+      "react/jsx-boolean-value": [
+        "warn",
+        "never"
+      ],
+      "react/jsx-curly-brace-presence": [
+        "warn",
+        "never"
+      ],
+      "react/jsx-no-useless-fragment": [
+        "warn",
+        "allowExpressions"
+      ]
+    }
+  },
+  "volta": {
+    "node": "20.15.1"
+  }
+}
