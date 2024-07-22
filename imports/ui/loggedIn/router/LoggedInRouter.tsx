@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
-import Presentation from "../../loggedOut/Presentation";
 
 export default function LoggedInRouter() {
 
@@ -12,7 +11,7 @@ export default function LoggedInRouter() {
   return (
       <Routes>
         <Route element={<></>}>
-            <Route path={`*`} element={<Presentation />} />
+            <Route path={`*`} element={<></>} />
         </Route>
       </Routes>
   );
